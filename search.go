@@ -30,3 +30,13 @@ func BinarySearch(orderedArray []int, target int) (int, error) {
 
 	return 0, errors.New("not found")
 }
+
+func LinearSearch(orderedArray []int, target int) (int, error) {
+	for idx, num := range orderedArray {
+		if num == target {
+			return idx, nil
+		}
+	}
+
+	return 0, errors.New("not found")
+}
